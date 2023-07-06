@@ -8,12 +8,10 @@ const forecast = (lat, long, callback) => {
     } else if (body.error) {
         callback('No result found', undefined)
     } else {
-        callback(undefined, {
-            tamp: body.current.temperature,
-            forcast: body.current.weather_descriptions[0]
-        })
+        callback(undefined, `The overcast is ${body.current.weather_descriptions[0]} it is curantly ${body.current.temperature} dagrys out and feels like ${body.current.feelslike} dagrys, and the humidty is ${body.current.humidity}%`)
     }
  })
 }
 
 module.exports = forecast
+
