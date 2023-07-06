@@ -61,7 +61,7 @@ app.get('/weather', (req, res) => {
 
             res.send({
                 location,
-                forcast:response
+                forcast: response
             })
         })
     })
